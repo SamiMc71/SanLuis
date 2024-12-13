@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lobster', cursive;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #6ca0dc; /* Fondo azul claro */
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap; /* Ajustar contenido en pantallas pequeñas */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Para permitir que los elementos bajen si es necesario */
+    width: 100%; /* Ocupa toda la pantalla en móviles */
+    justify-content: center;
+    margin-bottom: 10px; /* Espacio entre logo y menú en móviles */
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center; /* Centrar el texto del nombre y lema */
+}
+
+.school-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.school-name-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.school-info h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 1.8rem;
+    margin: 5px;
+}
+
+.school-motto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffff99; /* Color amarillo pálido para el lema */
+    font-size: 1rem;
+    white-space: nowrap; /* Evitar que el lema se rompa */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten */
+    gap: 10px;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    background-color: #3380ff; /* Efecto hover */
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3380ff; /* Fondo para el dropdown */
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sección principal */
+.initial-section {
+    background-image: url('https://www.transparenttextures.com/patterns/skulls.png'); /* Fondo creativo */
+    background-color: #fff5e6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Estilo para el video */
+.video-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+iframe {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border: 2px solid #e67e22;
+    border-radius: 10px;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Cambiar orientación del header */
+        padding: 15px;
+    }
+
+    .logo img {
+        height: 40px;
+        margin-bottom: 5px;
+    }
+
+    nav ul {
+        gap: 5px; /* Reducir espacio entre elementos del menú */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+
+    .footer-info {
+        padding: 15px;
+    }
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #64a2e0; /* Azul oscuro */
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 250px;
+    border: none;
+}
+
+/* Redes sociales */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-links img {
+    width: 30px; /* Tamaño reducido para móviles */
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover img {
+    opacity: 0.8; /* Efecto hover */
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #6ca0dc;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0; /* Mantiene el menú fijado */
+        left: -100%; /* Fuera de la vista por defecto */
+        width: 40%;
+        height: 100%;
+        background-color: #6ca0dc; /* Fondo del menú */
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 20px; /* Agrega espacio entre el menú y la parte superior */
+        padding-left: 15px; /* Agrega un margen izquierdo */
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    }
+
+    nav.active {
+        left: 0; /* Muestra el menú cuando está activo */
+        padding-top: 50px; /* Ajusta la distancia para que no quede pegado */
+    }
+
+    .menu-toggle {
+        margin-top: 10px; /* Opcional: ajusta también el botón hamburguesa */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        position: static; /* Posición estática para pantallas grandes */
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Elimina el fondo azul */
+    }
+
+    nav ul {
+        flex-direction: row; /* Alinea horizontalmente los elementos */
+        justify-content: flex-end; /* Alinea los elementos a la derecha */
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Los elementos del menú estarán en línea */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta el padding */
+        color: white;
+    }
+
+    nav ul li a:hover {
+        background-color: #3380ff;
+        border-radius: 5px;
+    }
+
+    /* Oculta el botón hamburguesa en pantallas grandes */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001; /* Por encima del menú */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Responsive: Mostrar menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #6ca0dc; /* Fondo azul claro */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 15px;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.school-name-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.school-info h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #1336d6;
+    font-size: 2rem;
+    margin-right: 15px; /* Espacio entre el nombre y el lema */
+}
+
+.school-motto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffff99; /* Color amarillo pálido para el lema */
+    font-size: 1.2rem;
+    white-space: nowrap; /* Para evitar que el lema se rompa en varias líneas */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #3380ff; /* Efecto hover */
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3380ff; /* Fondo para el dropdown */
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.main-section {
+    background-color: #f0f8ff; /* Celeste claro */
+    text-align: center;
+    padding: 3rem;
+    position: relative;
+    font-family: 'Arial', sans-serif;
+}
+
+.main-section h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 3px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 80%;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Slider Images */
+.slider {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 590px;
+    object-fit: cover;
+}
+
+/* Caption */
+.caption {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    text-align: center;
+    animation: slideIn 1.5s ease-out;
+}
+
+/* Slider Controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.slider-controls span {
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.slider-controls span:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.container h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .main-section h1 {
+        font-size: 2rem;
+    }
+
+    .slider-container {
+        max-width: 100%;
+    }
+
+    .caption {
+        font-size: 1.2rem;
+    }
+}
+
+.about, .levels, .admission, .publications {
+    padding: 2rem;
+}
+
+.level-card {
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin-right: 10px;
+    width: 30%;
+    text-align: center;
+}
+
+.level-card img {
+    width: 100%;
+}
+
+footer {
+    background-color: #64a2e0; /* Azul oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px; /* Tamaño de los logos */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que las imágenes se mantengan centradas y del mismo tamaño */
+}
+
+.social-links a:hover img {
+    opacity: 0.8; /* Efecto hover para hacer las imágenes un poco más transparentes al pasar el ratón */
+}
+
+
+.mision-vision-pilares {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #e0f2ff, #f7f9fc);
+}
+
+.mision-vision-pilares .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mision-vision-pilares .header {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.mision-vision-pilares .cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.mision-vision-pilares .card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mision-vision-pilares .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mision-vision-pilares .icon {
+    margin-bottom: 20px;
+}
+
+.mision-vision-pilares .icon img {
+    width: 80px;
+    height: auto;
+}
+
+.mision-vision-pilares h3 {
+    font-size: 1.5em;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.mision-vision-pilares p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6em;
+}
+
+.mision-vision-pilares ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+.mision-vision-pilares ul li {
+    margin-bottom: 10px;
+}
+
+/* Ajuste de las tarjetas para móviles */
+@media (max-width: 768px) {
+    .mision-vision-pilares .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mision-vision-pilares .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+.whatsapp-icon {
+    width: 20px;
+    height: auto; 
+    vertical-align: middle;
+    margin-right: 8px; 
+}
+
+
+
+/* Estilos de la sección */
+.niveles-educativos {
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f0f4f8;
+}
+
+.niveles-educativos h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+/* Estilos para el contenedor de niveles */
+.niveles-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Estilos para cada nivel */
+.nivel {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    width: 300px;
+}
+
+.nivel:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nivel img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 5px solid #007bff;
+}
+
+.nivel h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #333;
+}
+
+.nivel p {
+    font-size: 1em;
+    padding: 0 20px;
+    color: #666;
+}
+
+/* Botón de "Conoce más" */
+.btn-conoce-mas {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-conoce-mas:hover {
+    background-color: #0056b3;
+}
+
+/* Adaptabilidad para móviles */
+@media (max-width: 768px) {
+    .niveles-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nivel {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #6ca0dc;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0; /* Mantiene el menú fijado */
+        left: -100%; /* Fuera de la vista por defecto */
+        width: 40%;
+        height: 100%;
+        background-color: #6ca0dc; /* Fondo del menú */
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 20px; /* Agrega espacio entre el menú y la parte superior */
+        padding-left: 15px; /* Agrega un margen izquierdo */
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    }
+
+    nav.active {
+        left: 0; /* Muestra el menú cuando está activo */
+        padding-top: 50px; /* Ajusta la distancia para que no quede pegado */
+    }
+
+    .menu-toggle {
+        margin-top: 10px; /* Opcional: ajusta también el botón hamburguesa */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        position: static; /* Posición estática para pantallas grandes */
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Elimina el fondo azul */
+    }
+
+    nav ul {
+        flex-direction: row; /* Alinea horizontalmente los elementos */
+        justify-content: flex-end; /* Alinea los elementos a la derecha */
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Los elementos del menú estarán en línea */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta el padding */
+        color: white;
+    }
+
+    nav ul li a:hover {
+        background-color: #3380ff;
+        border-radius: 5px;
+    }
+
+    /* Oculta el botón hamburguesa en pantallas grandes */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001; /* Por encima del menú */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Responsive: Mostrar menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}

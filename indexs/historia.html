@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colegio Privado San Luis</title>
+    <link rel="stylesheet" href="/estilos/historia.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">
+            <img src="/img/logo.png" alt="San Luis Logo">
+            <div class="school-info">
+                <h2 class="school-type">Institución Educativa Privada</h2>
+                <div class="school-name-container">
+                    <h1>San Luis</h1>
+                    <p class="school-motto">"Liderazgo y Excelencia"</p>
+                </div>
+            </div>
+        </div>
+        <!-- Botón hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia</a></li>
+                <li class="dropdown">
+                    <a href="#">Niveles</a>
+                    <ul class="dropdown-content">
+                        <li><a href="inicial.html">Inicial</a></li>
+                        <li><a href="primaria.html">Primaria</a></li>
+                        <li><a href="secundaria.html">Secundaria</a></li>
+                    </ul>
+                </li>
+                <li><a href="organizacion.html">Organización</a></li>
+                <li><a href="admision.html">Admisión</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+                <li><a href="taller.html">Talleres</a></li> 
+                <li class="dropdown">
+                    <a href="#">SL LIFE</a>
+                    <ul class="dropdown-content">
+                        <li><a href="publicaciones.html">Estudiantes</a></li>
+                        <li><a href="celebrar.html">Celebraciones</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="https://wa.me/965050753" target="_blank">
+                        <img src="/img/whatsapp.png" alt="WhatsApp" class="whatsapp-icon"> Contáctenos
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Carruseles de imágenes -->
+    <main>
+        <div class="slider-container">
+            <div class="slider">
+                <h2>Himno de San Luis</h2>
+                <img src="/img/himno.png" alt="Estudiantes Ingresados">
+            </div>
+            <div class="slider">
+                <h2>Oracion de San Luis</h2>
+                <img src="/img/oracion (2).png" alt="Juegos Florales">
+            </div>
+            <div class="slider">
+                <h2>Historia de San Luis</h2>
+                <img src="/img/historia (1).png" alt="Juegos Deportivos">
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-info">
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d959.5230977629462!2d-71.3463242!3d-17.6492355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91445b04b7d79c83%3A0xa1879d5d9c3337df!2sSan%20Luis%2C%20Ilo%2018601!5e0!3m2!1ses!2spe!4v1698168803557!5m2!1ses!2spe" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+            <p>Ubicación: San Luis, Ilo 18601</p>
+            <p>Contacto: secretaria@iepsanluisilo.edu.pe</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/sanluisilo" target="_blank">
+                    <img src="/img/facebook.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/iepsanluis.ilo" target="_blank">
+                    <img src="/img/instagram.png" alt="Instagram">
+                </a>
+                <a href="https://www.tiktok.com/@iep.sanluis.ilo" target="_blank">
+                    <img src="/img/tik-tok.png" alt="TikTok">
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+</script>
+
+</html>

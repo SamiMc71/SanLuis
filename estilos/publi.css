@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'Lobster', cursive;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #6ca0dc; /* Fondo azul claro */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 15px;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.school-name-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.school-info h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #1336d6;
+    font-size: 2rem;
+    margin-right: 15px; /* Espacio entre el nombre y el lema */
+}
+
+.school-motto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffff99; /* Color amarillo pálido para el lema */
+    font-size: 1.2rem;
+    white-space: nowrap; /* Para evitar que el lema se rompa en varias líneas */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #3380ff; /* Efecto hover */
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3380ff; /* Fondo para el dropdown */
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.slider-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.slider-title {
+    position: absolute;
+    bottom: 10px; /* Coloca el título en la parte inferior */
+    left: 50%; /* Centra el título horizontalmente */
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Asegura que se ajuste al contenedor */
+    height:435px; /* Establece una altura fija uniforme */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 100%; /* Permite que la imagen respete el contenedor */
+    object-fit: contain; /* Asegura que la imagen se ajuste sin recortarse */
+    display: block;
+    margin: auto; /* Centra la imagen dentro del carrusel */
+}
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+footer {
+    background-color: #64a2e0; /* Azul oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px; /* Tamaño de los logos */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que las imágenes se mantengan centradas y del mismo tamaño */
+}
+
+.social-links a:hover img {
+    opacity: 0.8; /* Efecto hover para hacer las imágenes un poco más transparentes al pasar el ratón */
+}
+.whatsapp-icon {
+    width: 20px;
+    height: auto; 
+    vertical-align: middle;
+    margin-right: 8px; 
+}
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #6ca0dc;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0; /* Mantiene el menú fijado */
+        left: -100%; /* Fuera de la vista por defecto */
+        width: 40%;
+        height: 100%;
+        background-color: #6ca0dc; /* Fondo del menú */
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 20px; /* Agrega espacio entre el menú y la parte superior */
+        padding-left: 15px; /* Agrega un margen izquierdo */
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    }
+
+    nav.active {
+        left: 0; /* Muestra el menú cuando está activo */
+        padding-top: 50px; /* Ajusta la distancia para que no quede pegado */
+    }
+
+    .menu-toggle {
+        margin-top: 10px; /* Opcional: ajusta también el botón hamburguesa */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        position: static; /* Posición estática para pantallas grandes */
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Elimina el fondo azul */
+    }
+
+    nav ul {
+        flex-direction: row; /* Alinea horizontalmente los elementos */
+        justify-content: flex-end; /* Alinea los elementos a la derecha */
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Los elementos del menú estarán en línea */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta el padding */
+        color: white;
+    }
+
+    nav ul li a:hover {
+        background-color: #3380ff;
+        border-radius: 5px;
+    }
+
+    /* Oculta el botón hamburguesa en pantallas grandes */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001; /* Por encima del menú */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Responsive: Mostrar menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Estilos responsivos para los carruseles */
+@media (max-width: 768px) {
+    .slider {
+        max-height: 300px; /* Ajusta la altura del contenedor en móviles */
+    }
+
+    .slides img {
+        width: auto; /* Asegura que no se estire horizontalmente */
+        height: 100%; /* Mantiene la proporción en relación con el contenedor */
+        object-fit: contain; /* Imagen completa en el espacio disponible */
+    }
+
+    .slider-nav button {
+        width: 30px; /* Botones más pequeños */
+        height: 30px;
+        padding: 5px;
+        font-size: 0.8rem; /* Tamaño de texto reducido */
+    }
+
+    .slider-container {
+        grid-template-columns: 1fr; /* Una sola columna en dispositivos móviles */
+        gap: 10px; /* Menor espacio entre carruseles */
+    }
+
+    .slider-title {
+        font-size: 1rem; /* Texto más pequeño */
+        padding: 5px;
+    }
+}
+
+/* Ajustes para pantallas ultra pequeñas */
+
+@media (max-width: 768px) {
+    /* Estilo principal para las imágenes */
+    .slides img {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        height: 100%; /* Imagen ocupa todo el alto del contenedor */
+        object-fit: cover; /* Cubre todo el contenedor sin distorsionar */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 0; /* Elimina rellenos */
+    }
+
+    .carousel-item {
+        display: flex;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+        height: 100%; /* El contenedor tendrá el 100% de la altura disponible */
+        margin: 0; /* Elimina espacios adicionales */
+    }
+
+    .slider {
+        height: auto; /* Se ajusta automáticamente al tamaño de la imagen */
+        max-height: 100%; /* Asegura que no se expanda más allá del contenedor */
+        padding: 0; /* Elimina cualquier relleno */
+        overflow: hidden; /* Elimina cualquier desbordamiento no deseado */
+    }
+}

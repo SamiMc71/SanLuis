@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    background-color: #6ca0dc; /* Fondo azul claro */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    margin-right: 15px;
+}
+
+.school-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.school-type {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.school-name-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.school-info h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: #1336d6;
+    font-size: 2rem;
+    margin-right: 15px; /* Espacio entre el nombre y el lema */
+}
+
+.school-motto {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #ffff99; /* Color amarillo pálido para el lema */
+    font-size: 1.2rem;
+    white-space: nowrap; /* Para evitar que el lema se rompa en varias líneas */
+}
+
+/* Estilos del menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    font-family: 'Lobster', cursive;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+}
+
+nav ul li a:hover {
+    background-color: #3380ff; /* Efecto hover */
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #3380ff; /* Fondo para el dropdown */
+    top: 100%;
+    left: 0;
+    min-width: 150px;
+    z-index: 1;
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown-content li a {
+    padding: 10px;
+    color: white;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.mai
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    max-width: 1100px; /* Ajusta el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+.person:hover {
+    transform: translateY(-10px);
+}
+
+.image-container {
+    flex: 1;
+    text-align: center;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.image-container img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #f0f4c3;
+}
+
+.info {
+    flex: 2;
+}
+
+h2 {
+    font-size: 24px;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+h3, h4 {
+    font-size: 18px;
+    color: #424242;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #616161;
+    line-height: 1.6;
+    text-align: justify;
+}
+.mensaje h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 40px 0;
+    background-color: #f0f4f8;
+
+}
+.container {
+    max-width: 1150px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.video-container {
+    background-color: #f9f9f9; /* Color de fondo claro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px 0; /* Margen superior e inferior */
+    text-align: center; /* Centrar el contenido */
+}
+
+.video-container iframe {
+    border-radius: 10px; /* Bordes redondeados del iframe */
+    transition: transform 0.3s; /* Animación suave */
+}
+
+.video-container iframe:hover {
+    transform: scale(1.02); /* Efecto de zoom al pasar el ratón */
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
+footer {
+    background-color: #64a2e0; /* Azul oscuro */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-info {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.map iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 40px; /* Tamaño de los logos */
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que las imágenes se mantengan centradas y del mismo tamaño */
+}
+
+.social-links a:hover img {
+    opacity: 0.8; /* Efecto hover para hacer las imágenes un poco más transparentes al pasar el ratón */
+}
+.whatsapp-icon {
+    width: 20px;
+    height: auto; 
+    vertical-align: middle;
+    margin-right: 8px; 
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #6ca0dc;
+    }
+
+    nav .nav-links.open {
+        display: flex;
+    }
+
+    nav .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    nav {
+        position: fixed;
+        top: 0; /* Mantiene el menú fijado */
+        left: -100%; /* Fuera de la vista por defecto */
+        width: 40%;
+        height: 100%;
+        background-color: #6ca0dc; /* Fondo del menú */
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        padding-top: 20px; /* Agrega espacio entre el menú y la parte superior */
+        padding-left: 15px; /* Agrega un margen izquierdo */
+        box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+    }
+
+    nav.active {
+        left: 0; /* Muestra el menú cuando está activo */
+        padding-top: 50px; /* Ajusta la distancia para que no quede pegado */
+    }
+
+    .menu-toggle {
+        margin-top: 10px; /* Opcional: ajusta también el botón hamburguesa */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 769px) {
+    nav {
+        position: static; /* Posición estática para pantallas grandes */
+        width: auto;
+        height: auto;
+        background-color: transparent; /* Elimina el fondo azul */
+    }
+
+    nav ul {
+        flex-direction: row; /* Alinea horizontalmente los elementos */
+        justify-content: flex-end; /* Alinea los elementos a la derecha */
+        gap: 20px;
+    }
+
+    nav ul li {
+        display: inline-block; /* Los elementos del menú estarán en línea */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Ajusta el padding */
+        color: white;
+    }
+
+    nav ul li a:hover {
+        background-color: #3380ff;
+        border-radius: 5px;
+    }
+
+    /* Oculta el botón hamburguesa en pantallas grandes */
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Menu toggle (hamburguesa) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 1001; /* Por encima del menú */
+}
+
+.menu-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+/* Responsive: Mostrar menú hamburguesa en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .video-container {
+        padding: 10px; /* Reduce el espacio interno en pantallas pequeñas */
+        margin: 10px 0; /* Ajusta los márgenes */
+    }
+
+    .video-container iframe {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        height: 380px; /* Ajusta la altura automáticamente para mantener la proporción */
+    }
+}
+
